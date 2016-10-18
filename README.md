@@ -10,10 +10,14 @@ When the user is authenticated. The client will receive an *access_token* , all 
 # Authentication
 
 
+## Login
 
 
 ``` javascript
-      {
+
+/* Validation Error Response */
+
+      			{
 				"status": "error"
 				"error_data": {
 					"username": "The Email Address field is required."
