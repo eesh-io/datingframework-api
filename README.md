@@ -606,6 +606,57 @@ But if the type is *dropdown* , then there will be options that you need to fill
 
 # User Profile
 
+## User Object
+
+This JSON object type contains the basic details of a User.
+
+``` javascript
+
+		{
+		"id": "23"
+		"username": "saikatdutta1991@gmail.com"
+		"gender": "female"
+		"name": "saikat"
+		"dob": "1991-05-12"
+		"city": ""
+		"country": ""
+		"hereto": ""
+		"profile_pic_url": {
+		"thumbnail": "http://localhost/liteoxide/public/uploads/others/thumbnails/female.jpg"
+		"encounter": "http://localhost/liteoxide/public/uploads/others/encounters/female.jpg"
+		"other": "http://localhost/liteoxide/public/uploads/others/female.jpg"
+		"original": "http://localhost/liteoxide/public/uploads/others/original/female.jpg"
+		}-
+		"status": ""
+		"package_name": null
+		"expired_at": null
+		"activate_token": ""
+		"password_token": ""
+		"activate_user": "activated"
+		"register_from": "facebook"
+		"verified": "verified"
+		"latitude": null
+		"longitude": null
+		"language": ""
+		"last_request": "2016-06-20 13:31:05"
+		"access_token": "$2y$10$CMQOzxo/DnpLERT8VqfpX.oVS0pAm86CnDguV0RxDdrME/3amNvy."
+		"created_at": "2016-06-20 12:24:42"
+		"updated_at": "2016-06-20 13:31:05"
+		"deleted_at": null
+		"gender_text": "Female"
+		"age": 25
+		"superpower_activated": "false"
+		"superpower_days_left": "-9999"
+		"invisible": "false"
+		"online_status": "true"
+		"social_links": [1]
+		0:  "facebook"
+		-
+		"social_verified": "true"
+		"profile_picture": "female.jpg"
+		}
+```
+
 ## Display Profile
 
 *api/profile/me*
@@ -622,7 +673,7 @@ But if the type is *dropdown* , then there will be options that you need to fill
 3. user_popularity
 4. profile_complete_percentage
 5. user_score
-6. user
+6. user ( User Object )
 7. about_me
 8. user_interests
 9. profile_visitor_count
