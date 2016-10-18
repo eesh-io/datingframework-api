@@ -12,6 +12,36 @@ When the user is authenticated. The client will receive an *access_token* , all 
 
 ## Login
 
+* api/login *
+
+** URL Parameters **
+
+1. username => required|email|max:100
+2. password => required|min:8
+
+** Success Response **
+
+``` javascript
+
+/* Success Response */
+
+			{
+				"status": "success",
+				"success_data": {
+					"user_id": "6",
+					"name": "Tester",
+					"username": "saikatdutta1991@gmail.com",
+					"access_token": "$2y$10$hHAilU1RamonedkGg1bQlu0EEPKW0M6itIXrQEXx6fUiWHCcVth1S",
+					"last_request_timestamp": "2016-06-16 13:47:21"
+				}
+			}
+
+
+
+```
+
+
+** Error Response **
 
 ``` javascript
 
