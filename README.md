@@ -1006,5 +1006,27 @@ This JSON object type contains the basic details of a User.
 ```
 
 
-## Edit Profile
+## Update Profile
+
+### Update Basic Info
+
+### Update Custom Profile Fields
+
+### Update About Me
+
+### Update User Location
+
+### Update Profile Picture
+
+### Upload Other Photos
+
+### Delete Photo
+
+### Add Interest
+
+### Delete Interest
+
+### Deactivate Account
+
+### Delete Account
 
