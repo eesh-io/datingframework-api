@@ -1024,7 +1024,7 @@ This JSON object type contains the basic details of a User.
 
 ``` javascript
 {
-status": "success"
+"status": "success"
 	"success_data": {
 		"name": "Hello World"
 		"age": 21
@@ -1035,9 +1035,9 @@ status": "success"
 			"original": "http://localhost/liteoxide/public/uploads/others/original/male575e8fd2b435b36157926.jpg"
 			"encounter": "http://localhost/liteoxide/public/uploads/others/encounters/male575e8fd2b435b36157926.jpg"
 			"photo_name": "male575e8fd2b435b36157926.jpg"
-		}-
+		}
 		"success_text": "Basic information updated."
-	}-
+	}
 }
 
 ```
@@ -1052,7 +1052,7 @@ status": "success"
 		1: "The Gender field is required."
 		2: "The Date of Birth field is required."
 		"error_text": "Validation Error."
-	}-
+	}
 }
 
 ```
@@ -1142,11 +1142,203 @@ status": "success"
 
 ### Update User Location
 
+*api/profile/me/update-location*
+
+** URL Parameters **
+
+1. user_id, access_token
+2. city => required
+3. country => required
+4. lat => required
+5. lng => required
+
+** Success Response **
+
+``` javascript
+
+{
+	"status": "success"
+	"success_data": {
+	"success_text": "Location updated successfully."
+	}
+}
+
+
+```
+
+** Error Response **
+
+``` javascript
+
+{
+	"status": "error"
+	"error_data": {
+	0: "The Latitude field is required."
+	1: "The long field is required."
+	2: "The City field is required."
+	3: "The Country field is required."
+	"error_text": "Validation Error."
+	}
+}
+
+
+```
+
+
 ### Update Profile Picture
+
+*api/profile/me/upload-profile-picture*
+
+** URL Parameters **
+
+1. user_id, access_token
+2. profile_picture => raw image data type
+3. crop_x , crop_y => float
+4. crop_width, crop_height => int
+
+** Success Response **
+
+``` javascript
+{
+"status": "success"
+"success_data": {
+"photo_url": {
+"thumbnail": "http://localhost/liteoxide/public/uploads/others/thumbnails/29_576932237f4ce57066581.jpg"
+"other": "http://localhost/liteoxide/public/uploads/others/29_576932237f4ce57066581.jpg"
+"original": "http://localhost/liteoxide/public/uploads/others/original/29_576932237f4ce57066581.jpg"
+"encounter": "http://localhost/liteoxide/public/uploads/others/encounters/29_576932237f4ce57066581.jpg"
+"photo_id": "46"
+"photo_name": "29_576932237f4ce57066581.jpg"
+}-
+"success_text": "Profile picture uploaded successfully."
+}
+}
+```
+
+** Error Response **
+
+``` javascript
+
+{
+"status": "error"
+"error_data": {
+0: "The crop width field is required."
+1: "The crop height field is required."
+2: "The crop x field is required."
+3: "The crop y field is required."
+"error_text": "Validation Error"
+}
+}
+
+```
+
 
 ### Upload Other Photos
 
+*api/profile/me/upload-other-photos*
+
+** URL Parameters **
+
+1. user_id, access_token
+2. photos[] => array of raw image data
+
+** Success Response **
+
+``` javascript
+
+{
+"status": "success"
+	"success_data": {
+		"photo_urls": [2]
+			0:  {
+			"thumbnail": "http://localhost/liteoxide/public/uploads/others/thumbnails/29_57693092370d390486704.jpg"
+			"other": "http://localhost/liteoxide/public/uploads/others/29_57693092370d390486704.jpg"
+			"original": "http://localhost/liteoxide/public/uploads/others/original/29_57693092370d390486704.jpg"
+			"encounter": "http://localhost/liteoxide/public/uploads/others/encounters/29_57693092370d390486704.jpg"
+			"photo_id": 43
+			"photo_name": "29_57693092370d390486704.jpg"
+			}-
+			1:  {
+			"thumbnail": "http://localhost/liteoxide/public/uploads/others/thumbnails/29_576930927302191197026.jpg"
+			"other": "http://localhost/liteoxide/public/uploads/others/29_576930927302191197026.jpg"
+			"original": "http://localhost/liteoxide/public/uploads/others/original/29_576930927302191197026.jpg"
+			"encounter": "http://localhost/liteoxide/public/uploads/others/encounters/29_576930927302191197026.jpg"
+			"photo_id": 44
+			"photo_name": "29_576930927302191197026.jpg"
+			}-
+	-
+	"success_text": "Profile picture uploaded successfully."
+	}-
+}
+
+```
+
+** Error Response **
+
+``` javascript
+
+/* photos must be an array */
+
+{
+"status": "error"
+"error_data": {
+"error_text": "Photos must be send as array."
+}
+}
+
+/* photos[] field is required */
+{
+"status": "error"
+"error_data": {
+"error_text": "The photos[] field is required."
+}-
+}
+
+```
+
 ### Delete Photo
+
+*api/profile/me/delete-photo*
+
+** URL Parameters **
+
+1. user_id, access_token
+2. photo_name
+
+** Success Response **
+
+``` javascript
+
+{
+"status": "success"
+"success_data": {
+"success_text": "Photo deleted successfully."
+}
+}
+
+```
+
+** Error Response **
+
+``` javascript
+
+/* Unable ot delete photo. Try again later */
+{
+"status": "error"
+"error_data": {
+"error_text": "Unable to delete photo."
+}-
+}
+
+ /* photo_name field is required */
+{
+"status": "error"
+"error_data": {
+"error_text": "The photo_name field is required."
+}
+}
+
+```
 
 ### Add Interest
 
