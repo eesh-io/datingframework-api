@@ -608,6 +608,26 @@ But if the type is *dropdown* , then there will be options that you need to fill
 
 ## Display Profile
 
+*api/profile/me*
+
+** URL Parameters **
+
+1. user_id
+2. access_token
+
+** Response **
+
+1. photos
+2. field_sections -> fields -> fields [options]
+3. user_popularity
+4. profile_complete_percentage
+5. user_score
+6. user
+7. about_me
+8. user_interests
+9. profile_visitor_count
+10. max_file_upload_size
+
 ``` javascript
 
 {
