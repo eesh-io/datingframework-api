@@ -1340,6 +1340,48 @@ This JSON object type contains the basic details of a User.
 
 ```
 
+### Get Interest Suggestions
+
+*api/profile/me/get-interest-suggestions*
+
+** URL Parameters **
+
+1. user_id, access_token
+2. search_text => required
+
+** Success Response **
+
+``` javascript
+
+{
+"status": "success"
+"success_data": {
+"suggestions": [1]
+0:  {
+"id": "1"
+"interest": "Movies"
+}
+
+"success_text": "Suggestions retrived succesfully."
+}
+}
+
+```
+
+** Error Response **
+
+``` javascript
+
+{
+"status": "error"
+"error_data": {
+"error_text": "Interest search text is required."
+}
+}
+
+```
+
+
 ### Add Interest
 
 *api/profile/me/add-interest*
@@ -1733,6 +1775,15 @@ This JSON object type contains the basic details of a User.
 }
 
 ```
+
+
+# People Nearby
+
+
+# Encounters
+
+
+# Social Logins
 
 
 
