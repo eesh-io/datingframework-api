@@ -1426,19 +1426,313 @@ This JSON object type contains the basic details of a User.
 
 ## Change Email
 
+*api/settings/change/email*
+
+** URL Parameters **
+
+1. user_id, access_token
+2. email
+
+** Success Response **
+
+``` javascript
+
+{
+"status": "success"
+"success_data": {
+"user_account_activated": "true"
+"success_text": "Email has changed successfully."
+}
+}
+
+```
+
+** Error Response **
+
+``` javascript
+
+{
+"status": "error"
+"error_data": {
+"error_text": "The email has already been taken."
+}
+}
+
+
+
+{
+"status": "error"
+"error_data": {
+"error_text": "The email field is required."
+}
+}
+
+```
+
+
+
 ## Change Password
+
+*api/settings/change/password*
+
+** URL Parameters **
+
+1. user_id, access_token
+2. old_password => required
+3. password => required
+4. confirm_password => required
+
+** Success Response **
+
+``` javascript
+
+{
+"status": "success"
+"success_data": {
+"success_text": "Password has changed successfully."
+}
+}
+
+```
+
+** Error Response **
+
+``` javascript
+
+{
+"status": "error"
+"error_data": {
+"error_text": "Wrong old password."
+}
+}
+
+{
+"status": "error"
+"error_data": {
+"error_text": "Confirm password not matched."
+}
+}
+
+
+{
+"status": "error"
+"error_data": {
+"error_text": "Password is required"
+}
+}
+
+```
 
 ## Forgot Password
 
+** URL Parameters **
+
+1. username
+
+** Success Response **
+
+``` javascript
+
+{
+"status": "success"
+"success_data": {
+"success_text": "Password recovery link has been sent to your registered email id. Please reset your password."
+}
+}
+
+```
+
+** Error Response **
+
+``` javascript
+
+{
+"status": "error"
+"error_data": {
+"error_text": "Invalid email id."
+}
+}
+
+{
+"status": "error"
+"error_data": {
+"error_text": "Email not sent. Try again."
+}
+}
+
+```
+
 ## Update Default Language
 
-## Update Notifications
+*api/settings/save/language*
+
+** URL Parameters **
+
+1. user_id, access_token
+2. language => required
+
+** Success Response **
+
+``` javascript
+
+{
+"status": "success"
+"success_data": {
+"success_text": "User language saved successfully."
+}
+}
+
+
+```
+
+** Error Response **
+
+``` javascript
+
+{
+"status": "error"
+"error_data": {
+"error_text": "Language is required."
+}
+}
+
+```
+
+
+## Update Notifications  ( TO BE UPDATED )
+
+*api/settings/save/notification*
+
+** URL Parameters **
+
+1. user_id, access_token
+2. browser_visitor, email_visitor --> optional(require 1/0) if not then send 0 else 1, 
+3. browser_liked, email_liked, --> optional(require 1/0) if not then send 0 else 1, 
+4. browser_match, email_match, --> optional(require 1/0) if not then send 0 else 1,
+
+** Success Response **
+
+``` javascript
+
+{
+"status": "success"
+"success_data": {
+"success_text": "Notification settings saved successfully."
+}
+}
+
+```
 
 ## Update Privacy
 
+*api/settings/save/privacy*
+
+** URL Parameters **
+
+1. user_id, access_token
+2. show_online_status --> optional(require 1/0) if not then send 0 else 1, 
+3. show_distance, --> optional(require 1/0) if not then send 0 else 1, 
+
+** Success Response **
+
+``` javascript
+
+{
+"status": "success"
+"success_data": {
+"success_text": "Privacy settings saved successfully."
+}
+}
+
+```
+
 ## Update Invisibility Settings
+
+*api/settings/save/invisible*
+
+** URL Parameters **
+
+1. user_id, access_token
+2. hide_profile_visit --> optional(require 1/0) if not then send 0 else 1, 
+3. hide_superpowers --> optional(require 1/0) if not then send 0 else 1,
+
+** Success Response **
+
+``` javascript
+
+{
+"status": "success"
+"success_data": {
+"success_text": "Invisible settings saved successfully."
+}
+}
+
+```
+
+** Error Response **
+
+``` javascript
+
+{
+"status": "error"
+"error_data": {
+"user_superpower": "false"
+"error_text": "User superpower not activated"
+}
+}
+
+```
+
 
 ## Deactivate Account
 
+*api/settings/user/deactivate*
+
+** URL Parameters **
+
+1. user_id, access_token
+
+** Success Response **
+
+``` javascript
+
+{
+"status": "success"
+"success_data": {
+"success_text": "User deactivated successfully."
+}
+}
+
+```
+
+
 ## Delete Account
+
+*api/settings/user/delete*
+
+** URL Parameters **
+
+1. user_id, access_token
+2. password
+
+** Error Response **
+
+``` javascript
+{
+"status": "error"
+"error_data": {
+"error_text": "User password not matched."
+}
+}
+
+{
+"status": "error"
+"error_data": {
+"error_text": "Authentication Error"
+}
+}
+
+```
+
+
 
