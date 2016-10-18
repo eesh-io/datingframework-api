@@ -1322,7 +1322,7 @@ This JSON object type contains the basic details of a User.
 
 ``` javascript
 
-/* Unable ot delete photo. Try again later */
+/* Unable to delete photo. Try again later */
 {
 "status": "error"
 "error_data": {
@@ -1342,9 +1342,103 @@ This JSON object type contains the basic details of a User.
 
 ### Add Interest
 
+*api/profile/me/add-interest*
+
+** URL Parameters **
+
+1. user_id, access_token
+2. interest => required | 2-250 chars
+
+** Success Response **
+
+``` javascript
+
+{
+"status": "success"
+"success_data": {
+"interest_id": 5
+"user_interest": 7
+"interest_text": "hello"
+"success_text": "Location updated successfully."
+}
+}
+
+```
+
+** Error Response **
+
+``` javascript
+
+{
+"status": "error"
+"error_data": {
+"error_text": "Interest must be between 2 - 150"
+}
+}
+
+
+{
+"status": "error"
+"error_data": {
+"error_text": "Interest is required."
+}
+}
+
+```
+
 ### Delete Interest
 
-### Deactivate Account
+*api/profile/me/delete-interest*
 
-### Delete Account
+** URL Parameters **
+
+1. user_id, access_token
+2. user_interest_id => required
+
+** Success Response **
+
+``` javascript
+
+{
+"status": "success"
+"success_data": {
+"success_text": "User interest deleted successfully."
+}
+}
+
+```
+
+** Error Response **
+
+``` javascript
+
+{
+"status": "error"
+"error_data": {
+"error_text": "User interest id is required."
+}
+}
+
+
+```
+
+# User Account
+
+## Change Email
+
+## Change Password
+
+## Forgot Password
+
+## Update Default Language
+
+## Update Notifications
+
+## Update Privacy
+
+## Update Invisibility Settings
+
+## Deactivate Account
+
+## Delete Account
 
