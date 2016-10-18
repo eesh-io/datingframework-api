@@ -13,7 +13,7 @@ When the user is authenticated. The client will receive an *access_token* , all 
 
 ## Login
 
-* api/login *
+*api/login*
 
 ** URL Parameters **
 
