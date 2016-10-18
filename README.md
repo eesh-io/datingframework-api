@@ -9,6 +9,7 @@ When the user is authenticated. The client will receive an *access_token* , all 
 
 # Authentication
 
+## Registration
 
 ## Login
 
@@ -41,19 +42,68 @@ When the user is authenticated. The client will receive an *access_token* , all 
 ```
 
 
-** Error Response **
+** Error Response : Login Validation failed **
 
 ``` javascript
 
 /* Validation Error Response */
 
       			{
-				"status": "error"
+				"status": "error",
 				"error_data": {
-					"username": "The Email Address field is required."
-					"password": "The Password field is required."
-					"error_text": "Login Validation failed."
+					"username": "The Email Address field is required.",
+					"password": "The Password field is required.",
+					"error_text": "Login Validation failed.",
 				}
 			}
 
 ```
+
+** Error Response : Wrong Password **
+
+``` javascript
+
+/* Validation Error Response */
+
+			{
+			
+			"status": "error"
+				"error_data": {
+					"error_text": "Password not matched."
+				}
+			}
+
+```
+
+** Error Response : User not registered **
+
+``` javascript
+
+/* Validation Error Response */
+
+			{
+				"status": "error"
+				"error_data": {
+					"error_text": "User not registered."
+				}
+			}
+
+```
+
+
+** Error Response : Account Not Activated **
+
+``` javascript
+
+/* Validation Error Response */
+
+			{
+				"status": "error"
+				"error_data": {
+					"error_text": "User account not activated"
+				}
+			}
+
+```
+
+
