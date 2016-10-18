@@ -1008,11 +1008,137 @@ This JSON object type contains the basic details of a User.
 
 ## Update Profile
 
+
 ### Update Basic Info
+
+*api/profile/me/update-basic-info*
+
+** URL Parameters **
+
+1. user_id, access_token
+2. name : required,
+3. dob : require (dd-mm-yyyy format)
+4. gender : gender_code
+
+** Success Response **
+
+``` javascript
+{
+status": "success"
+	"success_data": {
+		"name": "Hello World"
+		"age": 21
+		"gender": "male"
+		"profile_picture_url": {
+			"thumbnail": "http://localhost/liteoxide/public/uploads/others/thumbnails/male575e8fd2b435b36157926.jpg"
+			"other": "http://localhost/liteoxide/public/uploads/others/male575e8fd2b435b36157926.jpg"
+			"original": "http://localhost/liteoxide/public/uploads/others/original/male575e8fd2b435b36157926.jpg"
+			"encounter": "http://localhost/liteoxide/public/uploads/others/encounters/male575e8fd2b435b36157926.jpg"
+			"photo_name": "male575e8fd2b435b36157926.jpg"
+		}-
+		"success_text": "Basic information updated."
+	}-
+}
+
+```
+
+** Error Response **
+
+``` javascript
+{
+"status": "error"
+	"error_data": {
+		0: "The Name field is required."
+		1: "The Gender field is required."
+		2: "The Date of Birth field is required."
+		"error_text": "Validation Error."
+	}-
+}
+
+```
 
 ### Update Custom Profile Fields
 
+*api/profile/me/update-custom-fields*
+
+** URL Parameters **
+
+1. user_id, access_token
+2. field_id & option_id ( For Dropdown Type )
+3. field_id & value ( For Text & Textarea Type )
+
+
+** Success response **
+
+``` javascript
+
+{
+	"status": "success"
+	"success_data": {
+	"success_text": "Your details are saved successfully."
+	}
+}
+
+```
+
+** Error Response **
+
+``` javascript
+
+{
+"status": "error"
+	"error_data": {
+	"error_text": "Choose custom fields options"
+	}
+}
+
+```
+
 ### Update About Me
+
+*api/profile/me/update-aboutme*
+
+** URL Parameters **
+
+1. user_id, access_token
+2. about_me =>  required, less than 1000 chars
+
+** Success Response **
+
+``` javascript
+{
+	"status": "success"
+	"success_data": {
+	"success_text": "Your about me is saved successfully."
+	}
+}
+
+```
+
+** Error Response **
+
+``` javascript
+
+/* Field is Required */
+
+{
+	"status": "error"
+	"error_data": {
+	"error_text": "The about_me is field required."
+	}
+}
+
+/* Field exceeds minimum characters */
+
+{
+	"status": "error"
+	"error_data": {
+	"error_text": "about_me must be within 1000 chars."
+	}
+}
+
+```
+
 
 ### Update User Location
 
