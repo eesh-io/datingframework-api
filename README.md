@@ -34,13 +34,28 @@ When the user is authenticated. The client will receive an *access_token* , all 
 	{
 	"status": "success",
 	"success_data": {
-		"success_text": "User registered Successfully"
-		"email_verify_required": 0
+		"success_text": "User registered Successfully",
+		"email_verify_required": 0,
 		}
 	}
 
 ```
 
+** Error Response: Validation Error **
+
+*error_data* will contain a list of all the fields with validation errors and what the error is.
+
+``` javascript
+	{
+	"status": "error",
+	"error_data": {
+		"username": "The Email Address has already been taken.",
+		"gender": "The Gender field is required.",
+		"error_text": "Validation Error"
+		}
+	}
+
+```
 
 ## Custom Fields
 
