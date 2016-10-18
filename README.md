@@ -7,9 +7,48 @@ Certain API calls donot require an *access_token*
 When the user is authenticated. The client will receive an *access_token* , all further API calls that needs to be performed must have the access_token and the authenticated user_id
 
 
+
 # Authentication
 
 ## Registration
+
+
+*api/register*
+
+** URL Parameters **
+
+1. name => required|max:100
+2. dob  => required|date_format:d/m/Y|minimum 18 years old
+3. username  => required|email|max:100|unique:user,username
+4. lat  => required
+5. lng  => required
+6. city => required
+7. country => required
+8. gender => required
+9. password => required|min:8|max:100
+10. password_confirmation' => required|min:8|max:100|match:password
+
+** Success Response **
+
+``` javascript
+	{
+	"status": "success",
+	"success_data": {
+		"success_text": "User registered Successfully"
+		"email_verify_required": 0
+		}
+	}
+
+```
+
+
+## Custom Fields
+
+A User will have Custom Fields. Custom Fields are created by the Administrator. Administrator can make a custom field mandatory in registration. So along with the usual fields the custom fields should also be displayed and sent to the registration API upon post.
+
+*api/get-custom-fields*
+
+
 
 ## Login
 
@@ -105,5 +144,6 @@ When the user is authenticated. The client will receive an *access_token* , all 
 			}
 
 ```
+
 
 
