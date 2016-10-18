@@ -608,5 +608,332 @@ But if the type is *dropdown* , then there will be options that you need to fill
 
 ## Display Profile
 
+``` javascript
+
+{
+	"status": "success"
+	"success_data": {
+	"photos": [4]
+		0:  {
+		"id": "24"
+		"userid": "23"
+		"source_photo_id": null
+		"photo_source": null
+		"photo_url": {
+		"thumbnail": "http://localhost/liteoxide/public/uploads/others/thumbnails23_5767ed991c4f864225536.jpg"
+		"encounter": "http://localhost/liteoxide/public/uploads/others/encounters23_5767ed991c4f864225536.jpg"
+		"other": "http://localhost/liteoxide/public/uploads/others/23_5767ed991c4f864225536.jpg"
+		"original": "http://localhost/liteoxide/public/uploads/others/original/23_5767ed991c4f864225536.jpg"
+		}-
+		"created_at": "2016-06-20 13:20:25"
+		"updated_at": "2016-06-20 13:20:25"
+		"deleted_at": null
+		"photo_name": "23_5767ed991c4f864225536.jpg"
+		}-
+		1:  {
+		"id": "25"
+		"userid": "23"
+		"source_photo_id": null
+		"photo_source": null
+		"photo_url": {
+		"thumbnail": "http://localhost/liteoxide/public/uploads/others/thumbnails23_5767ed9a1f95897130987.jpg"
+		"encounter": "http://localhost/liteoxide/public/uploads/others/encounters23_5767ed9a1f95897130987.jpg"
+		"other": "http://localhost/liteoxide/public/uploads/others/23_5767ed9a1f95897130987.jpg"
+		"original": "http://localhost/liteoxide/public/uploads/others/original/23_5767ed9a1f95897130987.jpg"
+		}-
+		"created_at": "2016-06-20 13:20:26"
+		"updated_at": "2016-06-20 13:20:26"
+		"deleted_at": null
+		"photo_name": "23_5767ed9a1f95897130987.jpg"
+		}-
+		2:  {
+		"id": "26"
+		"userid": "23"
+		"source_photo_id": null
+		"photo_source": null
+		"photo_url": {
+		"thumbnail": "http://localhost/liteoxide/public/uploads/others/thumbnails23_5767ed9a6758e54161303.jpg"
+		"encounter": "http://localhost/liteoxide/public/uploads/others/encounters23_5767ed9a6758e54161303.jpg"
+		"other": "http://localhost/liteoxide/public/uploads/others/23_5767ed9a6758e54161303.jpg"
+		"original": "http://localhost/liteoxide/public/uploads/others/original/23_5767ed9a6758e54161303.jpg"
+		}-
+		"created_at": "2016-06-20 13:20:26"
+		"updated_at": "2016-06-20 13:20:26"
+		"deleted_at": null
+		"photo_name": "23_5767ed9a6758e54161303.jpg"
+		}-
+		3:  {
+		"id": "27"
+		"userid": "23"
+		"source_photo_id": null
+		"photo_source": null
+		"photo_url": {
+		"thumbnail": "http://localhost/liteoxide/public/uploads/others/thumbnails23_5767ed9a87dd588552797.jpg"
+		"encounter": "http://localhost/liteoxide/public/uploads/others/encounters23_5767ed9a87dd588552797.jpg"
+		"other": "http://localhost/liteoxide/public/uploads/others/23_5767ed9a87dd588552797.jpg"
+		"original": "http://localhost/liteoxide/public/uploads/others/original/23_5767ed9a87dd588552797.jpg"
+		}-
+		"created_at": "2016-06-20 13:20:26"
+		"updated_at": "2016-06-20 13:20:26"
+		"deleted_at": null
+		"photo_name": "23_5767ed9a87dd588552797.jpg"
+		}-
+
+	"field_sections": [1]
+		0:  {
+		"section_id": "1"
+		"text": "custom_profile.personalinformation"
+		"fields": [6]
+			0:  {
+			"field_id": "2"
+			"field_type": "dropdown"
+			"text": "custom_profile.height"
+			"options": [7]
+				0:  {
+				"option_id": "3"
+				"text": "custom_profile.5ft"
+				"is_selected": "false"
+				}-
+				1:  {
+				"option_id": "4"
+				"text": "custom_profile.55ft"
+				"is_selected": "false"
+				}-
+				2:  {
+				"option_id": "5"
+				"text": "custom_profile.57ft"
+				"is_selected": "false"
+				}-
+				3:  {
+				"option_id": "6"
+				"text": "custom_profile.58ft"
+				"is_selected": "false"
+				}-
+				4:  {
+				"option_id": "7"
+				"text": "custom_profile.6ft"
+				"is_selected": "false"
+				}-
+				5:  {
+				"option_id": "8"
+				"text": "custom_profile.62ft"
+				"is_selected": "false"
+				}-
+				6:  {
+				"option_id": "9"
+				"text": "custom_profile.63ft"
+				"is_selected": "false"
+				}-
+
+			}-
+			1:  {
+			"field_id": "3"
+			"field_type": "dropdown"
+			"text": "custom_profile.weight"
+			"options": [13]
+				0:  {
+				"option_id": "10"
+				"text": "custom_profile.50kg"
+				"is_selected": "false"
+				}-
+				1:  {
+				"option_id": "11"
+				"text": "custom_profile.52kg"
+				"is_selected": "false"
+				}-
+				2:  {
+				"option_id": "12"
+				"text": "custom_profile.53kg"
+				"is_selected": "false"
+				}-
+				3:  {
+				"option_id": "13"
+				"text": "custom_profile.58kg"
+				"is_selected": "false"
+				}-
+				4:  {
+				"option_id": "14"
+				"text": "custom_profile.60kg"
+				"is_selected": "false"
+				}-
+				5:  {
+				"option_id": "15"
+				"text": "custom_profile.62kg"
+				"is_selected": "false"
+				}-
+				6:  {
+				"option_id": "16"
+				"text": "custom_profile.64kg"
+				"is_selected": "false"
+				}-
+				7:  {
+				"option_id": "17"
+				"text": "custom_profile.68kg"
+				"is_selected": "false"
+				}-
+				8:  {
+				"option_id": "18"
+				"text": "custom_profile.70kg"
+				"is_selected": "false"
+				}-
+				9:  {
+				"option_id": "19"
+				"text": "custom_profile.72kg"
+				"is_selected": "false"
+				}-
+				10:  {
+				"option_id": "20"
+				"text": "custom_profile.74kg"
+				"is_selected": "false"
+				}-
+				11:  {
+				"option_id": "21"
+				"text": "custom_profile.78kg"
+				"is_selected": "false"
+				}-
+				12:  {
+				"option_id": "22"
+				"text": "custom_profile.80kg"
+				"is_selected": "false"
+				}-
+
+			}-
+			2:  {
+			"field_id": "4"
+			"field_type": "dropdown"
+			"text": "custom_profile.eyecolor"
+			"options": [3]
+				0:  {
+				"option_id": "23"
+				"text": "custom_profile.black"
+				"is_selected": "false"
+				}-
+				1:  {
+				"option_id": "24"
+				"text": "custom_profile.brown"
+				"is_selected": "false"
+				}-
+				2:  {
+				"option_id": "25"
+				"text": "custom_profile.blue"
+				"is_selected": "false"
+				}-
+
+			}
+			3:  {
+			"field_id": "5"
+			"field_type": "dropdown"
+			"text": "custom_profile.hereto"
+			"options": [3]
+				0:  {
+				"option_id": "26"
+				"text": "custom_profile.dating"
+				"is_selected": "false"
+				}-
+				1:  {
+				"option_id": "27"
+				"text": "custom_profile.chatting"
+				"is_selected": "false"
+				}-
+				2:  {
+				"option_id": "28"
+				"text": "custom_profile.makenewfriends"
+				"is_selected": "false"
+				}
+
+			}
+			4:  {
+			"field_id": "6"
+			"field_type": "text"
+			"text": "Text"
+			"value": ""
+			}
+			5:  {
+			"field_id": "7"
+			"field_type": "textarea"
+			"text": "textarea"
+			"value": ""
+			}-
+
+		}
+
+		"user_popularity": {
+		"popularity": 0
+		"popularity_type": "very_very_low"
+		}-
+		"profile_complete_percentage": 15
+		"user_score": {
+		"score": 0
+		"likes": 0
+		"dislikes": 0
+		}
+		"user": {
+		"id": "23"
+		"username": "saikatdutta1991@gmail.com"
+		"gender": "female"
+		"name": "saikat"
+		"dob": "1991-05-12"
+		"city": ""
+		"country": ""
+		"hereto": ""
+		"profile_pic_url": {
+		"thumbnail": "http://localhost/liteoxide/public/uploads/others/thumbnails/female.jpg"
+		"encounter": "http://localhost/liteoxide/public/uploads/others/encounters/female.jpg"
+		"other": "http://localhost/liteoxide/public/uploads/others/female.jpg"
+		"original": "http://localhost/liteoxide/public/uploads/others/original/female.jpg"
+				}
+		"status": ""
+		"package_name": null
+		"expired_at": null
+		"activate_token": ""
+		"password_token": ""
+		"activate_user": "activated"
+		"register_from": "facebook"
+		"verified": "verified"
+		"latitude": null
+		"longitude": null
+		"language": ""
+		"last_request": "2016-06-20 13:31:05"
+		"access_token": "$2y$10$CMQOzxo/DnpLERT8VqfpX.oVS0pAm86CnDguV0RxDdrME/3amNvy."
+		"created_at": "2016-06-20 12:24:42"
+		"updated_at": "2016-06-20 13:31:05"
+		"deleted_at": null
+		"gender_text": "Female"
+		"age": 25
+		"superpower_activated": "false"
+		"superpower_days_left": "-9999"
+		"invisible": "false"
+		"online_status": "true"
+		"social_links": [1] {
+			0:  "facebook"
+			}
+
+		"social_verified": "true"
+		"profile_picture": "female.jpg"
+		}
+		"about_me": ""
+		"user_interests": [0]
+		"profile_visitor_count": {
+				"today": 0
+				"this_week": 0
+				"this_month": 0
+				}
+		"profile_visitor_difference": {
+		"today_increased": "false"
+		"this_week_increased": "false"
+		"this_month_increased": "false"
+		}
+		"max_file_upload_size": {
+		"value": "10"
+		"unit": "MB"
+		}
+		"success_text": "Profile Data retrived successfully."
+	}
+}
+
+
+```
+
+
 ## Edit Profile
 
