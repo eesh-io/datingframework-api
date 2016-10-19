@@ -603,6 +603,106 @@ But if the type is *dropdown* , then there will be options that you need to fill
 
 ```
 
+## Get User Settings
+
+*api/settings*
+
+** URL Parameters **
+
+1. user_id, access_token
+
+** Success Response **
+
+``` javascript
+
+{
+	"status": "success"
+	"success_data": {
+	"languages": {
+	"supported": [9]
+	0:  "de"
+	1:  "en"
+	2:  "es"
+	3:  "fr"
+	4:  "hu"
+	5:  "nl"
+	6:  "pl"
+	7:  "pt"
+	8:  "ru"
+	-
+	"user_language": ""
+	}-
+	"notification_settings": {
+	"visitor_notification": {
+	"browser": 1
+	"email": 1
+	}-
+	"like_notification": {
+	"browser": 1
+	"email": 1
+	}-
+	"match_notification": {
+	"browser": 1
+	"email": 1
+	}-
+	}-
+	"privacy_settings": {
+	"show_online_status": 1
+	"show_distance": 1
+	}-
+	"invisible_settings": {
+	"hide_profile_visit": 0
+	"hide_superpower": 0
+	}-
+	"user_password_set": "true"
+	"auth_user": {
+	"id": "31"
+	"username": "saikatdutta1991@gmail.com"
+	"gender": "male"
+	"name": "ʇɐʞıɐs ɐʇʇnp"
+	"dob": "1991-12-05"
+	"city": "Bangalore"
+	"country": "India"
+	"hereto": ""
+	"profile_pic_url": {
+	"thumbnail": "http://localhost/liteoxide/public/uploads/others/thumbnails/31_576ba07ca13bb_75023432.jpg"
+	"encounter": "http://localhost/liteoxide/public/uploads/others/encounters/31_576ba07ca13bb_75023432.jpg"
+	"other": "http://localhost/liteoxide/public/uploads/others/31_576ba07ca13bb_75023432.jpg"
+	"original": "http://localhost/liteoxide/public/uploads/others/original/31_576ba07ca13bb_75023432.jpg"
+	}-
+	"status": ""
+	"package_name": null
+	"expired_at": null
+	"activate_token": "724064975"
+	"password_token": ""
+	"activate_user": "activated"
+	"register_from": "facebook"
+	"verified": "verified"
+	"latitude": "12.98"
+	"longitude": "77.58"
+	"language": ""
+	"last_request": "2016-06-23 08:54:16"
+	"access_token": "$2y$10$Fept1UrAq7QA.oGCpYlOI.Nxadz1nGto4T4dB1ciWK0wzmDcJagja"
+	"created_at": "2016-06-23 08:40:28"
+	"updated_at": "2016-06-23 08:54:16"
+	"deleted_at": null
+	"gender_text": "Male"
+	"age": 24
+	"superpower_activated": "false"
+	"superpower_days_left": "-9999"
+	"invisible": "false"
+	"online_status": "true"
+	"social_links": [1]{
+		0:  "facebook"
+		}
+	"social_verified": "true"
+	"profile_picture": "31_576ba07ca13bb_75023432.jpg"
+	}
+	"success_text": "User settings retrived successfully."
+}
+
+```
+
 
 # User Profile
 
