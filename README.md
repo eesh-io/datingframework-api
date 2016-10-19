@@ -3595,3 +3595,452 @@ Sign in using the Facebook SDK and pass the returned values to this API:
 
 ```
 
+# WebSocket Chat
+
+Your client must be using the Socket.IO Library
+
+## Connecting to Socket
+
+### Get Socket Details
+
+*api/chat/server-details*
+
+** URL Parameters **
+
+No Parameters
+
+** Success Response **
+
+Use the *url* to connect via the Socket.IO Library. After connecting the message "connected" will be emitted from server. This event will contain the *socket_id*
+
+``` javascript
+
+{
+		"status": "success"
+		"details": {
+			"domain": "http://yourdatingframeworkwebsite.club"
+			"port": 24532
+			"url": "http://yourdatingframeworkwebsite.club:24532" // this is the url to connect
+		}
+	}
+
+```
+
+### Map Socket with the Logged in User
+
+*api/chat/map-user-socket*
+
+** URL Parameters **
+
+1. user_id, access_token
+2. socket_id
+
+** Success Response **
+
+All the images in chat shoudd have the url of *base_chat_image_url*
+
+``` javascript
+
+{
+"status": "success"
+"success_type": "USER_SOCKET_MAPPED"
+"base_chat_images_url": "http://yourdatingframeworkwebsite.club/uploads/chat"
+}
+
+```
+
+### Get Chat Contacts List
+
+*api/chat/users*
+
+** URL Parameters **
+
+1. user_id, access_token
+2. last_contact_id -> optional
+
+** Success Response **
+
+``` javascript
+
+{
+	"status": "success"
+	"success_type": "FIRST_20_USERS_RETRIVED"
+	"chat_users": [2]
+	0:  {
+	"user": {
+	"id": 546
+	"username": "jothikarthik@gmail.com"
+	"gender": "Male"
+	"dob": "1990-08-30"
+	"city": "Chennai"
+	"country": "India"
+	"hereto": ""
+	"profile_pic_url": "546_57c52a2c9143652097543.jpg"
+	"status": ""
+	"activate_user": "activated"
+	"register_from": "SocialOxide"
+	"verified": "unverified"
+	"latitude": 13.0591
+	"longitude": 80.2748
+	"created_at": "2016-08-30 06:39:23"
+	"updated_at": "2016-09-19 14:04:51"
+	"deleted_at": null
+	"name": "karthi karthi"
+	"slug_name": "karthi-karthi"
+	"language": "en"
+	"last_request": "2016-08-30 06:42:35"
+	"remember_token": null
+	"profile_picture": "http://df-dev.socialoxide.club/uploads/others/thumbnails/546_57c52a2c9143652097543.jpg"
+	"age": 26
+	"isTyping": false
+	"last_msg": ""
+	"last_msg_type": 0
+	"messages": [0]
+	"total_messages_count": 0
+	"total_unread_messages_count": 0
+	"total_photos_count": 1
+	"score": 8.75
+	"can_init_chat": false
+	"init_chat_error_type": "CHAT_INIT_HOURS_EXPIRED"
+	}-
+	"online": 0
+	"matched": 0
+	"is_contacted": 1
+	"contact_id": 397
+	"contacted_timestamp": "2016-10-13 12:49:56"
+	}-
+	1:  {
+	"user": {
+	"id": 670
+	"username": "saikat.amca.12@acharya.ac.in"
+	"gender": "male"
+	"dob": "1991-10-13"
+	"city": "Bengaluru"
+	"country": "India"
+	"hereto": ""
+	"profile_pic_url": "670_57fe0ccf7c7f070430731.jpg"
+	"status": ""
+	"activate_user": "activated"
+	"register_from": ""
+	"verified": "verified"
+	"latitude": 12.9716
+	"longitude": 77.5946
+	"created_at": "2016-10-10 12:55:19"
+	"updated_at": "2016-10-14 10:34:34"
+	"deleted_at": null
+	"name": "Saikat Acharya"
+	"slug_name": "saikat-acharya"
+	"language": "en"
+	"last_request": "2016-10-14 10:34:34"
+	"remember_token": "GCkVTrIURu19drjDhPgKikMDgLRBjY5WiAqwkKRbtgFn2KtwzByValIDsSe9"
+	"profile_picture": "http://df-dev.socialoxide.club/uploads/others/thumbnails/670_57fe0ccf7c7f070430731.jpg"
+	"age": 25
+	"isTyping": false
+	"last_msg": "676_5800c31d61c2942107357.jpg"
+	"last_msg_type": 2
+	"messages": [0]
+	"total_messages_count": 28
+	"total_unread_messages_count": 0
+	"can_init_chat": true
+	}-
+	"online": 0
+	"matched": 1
+	"is_contacted": 1
+	"contact_id": 392
+	"contacted_timestamp": "2016-10-12 10:27:24"
+	}-
+	-
+	"total_contacts_count": 2
+	"overall_unread_messages_count": 0
+}
+
+```
+
+### Get only Contacts Count
+
+*api/chat/contacts-count*
+
+** URL Parameters **
+
+1. user_id, access_token
+
+** Success Response **
+
+``` javascript
+
+{
+"status": "success"
+"total_contacts_count": 3
+}
+
+```
+
+## Add a contact
+
+*api/chat/add-to-contact*
+
+** URL Parameters **
+
+1. user_id, access_token
+2. other_user_id
+
+** Success Response **
+
+``` javascript
+
+{
+	"status": "success"
+	"success_type": "NEW_CONTACT"
+	"contact": {
+	"user1": 676
+	"user2": 120
+	"source": 676
+	"updated_at": "2016-10-14 11:58:40"
+	"created_at": "2016-10-14 11:58:40"
+	"id": 400
+	}
+}
+
+```
+
+** Error Response **
+
+``` javascript
+
+{
+	"status": "error"
+	"error_type": "ALREADY_CONTACTED"
+	"contact": {
+	"id": 397
+	"user1": 676
+	"user2": 546
+	"source": "676"
+	"created_at": "2016-10-13 12:49:56"
+	"updated_at": "2016-10-13 12:49:56"
+	"deleted_at": null
+	}
+}
+
+{
+	"status": "error"
+	"error_type": "UNKNOWN_ERROR"
+	"error_text": "Trying to get property of non-objectfile : /home/username/webapps/datingframework_dev/app/Plugins/WebsocketChatPlugin/repositories/WebsocketChatRepository.phpon line : 127"
+}
+
+
+{
+	"status": "error"
+	"error_type": "OTHE_USER_ID_INVALID"
+	"error_text": "other_user_id is required"
+}
+
+```
+
+## Delete Contact
+
+*api/chat/contact/delete*
+
+** URL Parameters **
+
+1. user_id, access_token
+2. contact_id
+
+** Success Response **
+
+``` javascript
+{
+"status": "success"
+"success_type": "CONTACT_DELETED"
+"success_text": "Contact deleted"
+}
+```
+
+** Error Response **
+
+``` javascript
+
+{
+"status": "error"
+"error_type": "NOT_AUTHORISE_TO_DELETE"
+"error_text": "Not authorise to delete"
+}
+
+
+```
+
+## Get Messages of a User
+
+*api/chat/messages*
+
+** URL Parameters **
+
+1. user_id, other_user_id, access_token
+2. last_message_id --> optional (user to retrive more message before the message id)
+
+** Success Response **
+
+``` javascript
+
+{
+	"status": "success"
+	"success_type": "LAST_20_MESSAGES_RETRIVED"
+	"messages": [20]
+
+	0:  {
+	"id": 1232
+	"from_user": 676
+	"to_user": 670
+	"contact_id": 392
+	"text": "asdf"
+	"type": 0
+	"meta": ""
+	"status": "read"
+	"created_at": "2016-10-13 15:33:29"
+	"updated_at": "2016-10-14 10:34:34"
+	"deleted_at": null
+	}-
+
+	1:  {
+	"id": 1249
+	"from_user": 676
+	"to_user": 670
+	"contact_id": 392
+	"text": ""
+	"type": 2
+	"meta": "676_5800c31d61c2942107357.jpg"
+	"status": "unread"
+	"created_at": "2016-10-14 11:35:57"
+	"updated_at": "2016-10-14 11:35:57"
+	"deleted_at": null
+	"image_url": "http://df-dev.socialoxide.club/uploads/chat/676_5800c31d61c2942107357.jpg"
+	}
+
+}
+
+
+```
+
+** Error Response **
+
+``` javascript
+
+{
+"status": "error"
+"error_type": "INVALID_OTHER_USER_ID"
+"error_text": "other_user_id required"
+}
+
+```
+
+## Delete Message
+
+*api/chat/message/delete*
+
+** URL Parameters **
+
+1. user_id, access_token
+2. message_id => required
+
+** Success Response **
+
+``` javascript
+
+{
+"status": "success"
+"success_type": "MESSAGE_DELETED"
+"success_text": "Message deleted"
+}
+
+```
+
+** Error Response **
+
+``` javascript
+
+{
+"status": "error"
+"error_type": "FAILED_TO_DELETE_MESSAGE"
+"error_text": "Failed to delete message"
+}
+
+```
+
+## Mark Messages as Read
+
+*api/chat/messages/mark-read*
+
+** URL Parameters **
+
+1. user_id, access_token
+2. other_user_id => (optional) to mark only messages from this user as read
+3. read_all => (optional) to mark all unread messages from all users as read for a user.
+
+Either other_user_id or read_all is required
+
+** Success Response **
+
+``` javascript
+
+{
+"status": "success"
+"success_type": "MARK_READ_ALL_MESSAGES_OF_USER_ID_111"
+"success_text": "All messages marked read"
+}
+
+
+{
+"status": "success"
+"success_type": "MARK_READ_ALL_MESSAGES"
+"success_text": "All messages marked read"
+}
+
+```
+
+## Upload image for sending to user
+
+*api/chat/upload/image*
+
+** URL Parameters **
+
+1. user_id, access_token
+2. image => raw image data
+
+** Success Response **
+
+The response will have *image_url* , that should be emitted in the *new_message* socket event.
+
+``` javascript
+
+{
+"status": "success"
+"success_type": "IMAGE_UPLOADED"
+"image": "676_5800cec02f8db25964936.jpg"
+"image_url": "http://yourdatingframeworkwebsite.club/uploads/chat/676_5800cec02f8db25964936.jpg"
+}
+
+
+```
+
+** Error Response **
+
+``` javascript
+
+{
+"status": "error"
+"error_type": "IMAGE_INVALID"
+"error_text": "image param is reqired"
+}
+
+{
+"status": "error"
+"error_type": "INVALID_IMAGE_FILE"
+"error_text": "invalid image"
+}
+
+```
+
+
+## WebSocket Events
+
+
+
