@@ -1879,6 +1879,319 @@ This JSON object type contains the basic details of a User.
 
 # People Nearby
 
+## Get People Nearby
+
+*api/people-nearby*
+
+** URL Parameters **
+
+1. user_id, access_token
+
+** Success Response **
+
+``` javascript
+
+{
+	"status": "success"
+	"success_data": {
+	"riseup_credits": "20"
+	"filter_data": {
+	"perfered_ages": {
+	"min": "18"
+	"max": "80"
+	}-
+	"prefered_genders": [2]
+	0:  "male"
+	1:  "female"
+	-
+	"prefered_online_status": "all" or "online"
+	"perfered_distance": {
+	"value": "100"
+	"unit": "km"
+	}-
+	}-
+	"nearby_users": [3]
+	0:  {
+	"id": "30"
+	"username": "saikatdutta1991@gmail.commm"
+	"gender": "male"
+	"name": "ʇɐʞıɐs ɐʇʇnp"
+	"dob": "1991-12-05"
+	"city": "Bangalore"
+	"country": "India"
+	"hereto": ""
+	"status": ""
+	"package_name": null
+	"expired_at": null
+	"activate_user": "activated"
+	"register_from": "facebook"
+	"verified": "verified"
+	"latitude": "12.98"
+	"longitude": "77.58"
+	"language": ""
+	"last_request": "2016-06-22 14:45:41"
+	"created_at": "2016-06-22 14:39:00"
+	"updated_at": "2016-06-22 14:45:41"
+	"deleted_at": null
+	"profile_picture_url": {
+	"thumbnail": "http://localhost/liteoxide/public/uploads/others/thumbnails/30_576aa304723c6_42836200.jpg"
+	"encounter": "http://localhost/liteoxide/public/uploads/others/encounters/30_576aa304723c6_42836200.jpg"
+	"other": "http://localhost/liteoxide/public/uploads/others/30_576aa304723c6_42836200.jpg"
+	"original": "http://localhost/liteoxide/public/uploads/others/original/30_576aa304723c6_42836200.jpg"
+	}-
+	"profile_picture_name": "30_576aa304723c6_42836200.jpg"
+	"superpower_activated": "false"
+	"online_status": "false"
+	"age": 24
+	"raised": "true"
+	"populatiry": {
+	"value": ""
+	"type": "very_very_low"
+	}-
+	"profile": {
+	"id": "30"
+	"userid": "30"
+	"prefer_gender": "male,female"
+	"prefer_age": "18-80"
+	"prefer_online_status": null
+	"prefer_distance_nearby": "100"
+	"popularity": null
+	"aboutme": ""
+	"latitude": null
+	"longitude": null
+	"created_at": "2016-06-22 14:39:00"
+	"updated_at": "2016-06-22 14:39:00"
+	"deleted_at": null
+	}-
+	}-
+	1:  {
+	"id": "7"
+	"username": "saikat@gmail.com"
+	"gender": "female"
+	"name": "Saikat Dutta"
+	"dob": "1991-02-01"
+	"city": "Southegowdanahalli"
+	"country": "India"
+	"hereto": ""
+	"status": ""
+	"package_name": null
+	"expired_at": null
+	"activate_user": "activated"
+	"register_from": "LiteOxide"
+	"verified": "unverified"
+	"latitude": "13.24"
+	"longitude": "77.71"
+	"language": "en"
+	"last_request": "2016-06-23 10:07:59"
+	"created_at": "2016-06-13 10:33:36"
+	"updated_at": "2016-06-23 10:07:59"
+	"deleted_at": null
+	"profile_picture_url": {
+	"thumbnail": "http://localhost/liteoxide/public/uploads/others/thumbnails/7_575e8c3a045a626214259.jpg"
+	"encounter": "http://localhost/liteoxide/public/uploads/others/encounters/7_575e8c3a045a626214259.jpg"
+	"other": "http://localhost/liteoxide/public/uploads/others/7_575e8c3a045a626214259.jpg"
+	"original": "http://localhost/liteoxide/public/uploads/others/original/7_575e8c3a045a626214259.jpg"
+	}-
+	"profile_picture_name": "7_575e8c3a045a626214259.jpg"
+	"superpower_activated": "false"
+	"online_status": "false"
+	"age": 25
+	"raised": "true"
+	"populatiry": {
+	"value": ""
+	"type": "very_very_low"
+	}-
+	"profile": {
+	"id": "7"
+	"userid": "7"
+	"prefer_gender": "male,female"
+	"prefer_age": "18-80"
+	"prefer_online_status": null
+	"prefer_distance_nearby": "100"
+	"popularity": null
+	"aboutme": ""
+	"latitude": null
+	"longitude": null
+	"created_at": "2016-06-13 10:33:36"
+	"updated_at": "2016-06-13 10:33:36"
+	"deleted_at": null
+	}-
+	}-
+	2:  {
+	"id": "5"
+	"username": "saikatdutta@gmail.com"
+	"gender": "female"
+	"name": "ʇɐʞıɐs ɐʇʇnp"
+	"dob": "1991-12-05"
+	"city": "Bangalore"
+	"country": "India"
+	"hereto": ""
+	"status": ""
+	"package_name": null
+	"expired_at": null
+	"activate_user": "activated"
+	"register_from": "vk"
+	"verified": "verified"
+	"latitude": "12.97"
+	"longitude": "77.59"
+	"language": ""
+	"last_request": "2016-06-11 15:03:15"
+	"created_at": "2016-06-11 14:21:44"
+	"updated_at": "2016-06-11 15:03:15"
+	"deleted_at": null
+	"profile_picture_url": {
+	"thumbnail": "http://localhost/liteoxide/public/uploads/others/thumbnails/5_575c1e785d7a2_52889064.jpg"
+	"encounter": "http://localhost/liteoxide/public/uploads/others/encounters/5_575c1e785d7a2_52889064.jpg"
+	"other": "http://localhost/liteoxide/public/uploads/others/5_575c1e785d7a2_52889064.jpg"
+	"original": "http://localhost/liteoxide/public/uploads/others/original/5_575c1e785d7a2_52889064.jpg"
+	}-
+	"profile_picture_name": "5_575c1e785d7a2_52889064.jpg"
+	"superpower_activated": "false"
+	"online_status": "false"
+	"age": 24
+	"raised": "false"
+	"populatiry": {
+	"value": ""
+	"type": "very_very_low"
+	}
+	"credit_balance": "1000"
+	}
+	"paging": {
+	"total": 3
+	"current_page_url": "http://localhost/liteoxide/public/api/people-nearby?page=1"
+	"more_pages": "false"
+	"prevous_page_url": ""
+	"next_page_url": ""
+	"last_page_url": "http://localhost/liteoxide/public/api/people-nearby?page=1"
+	}
+	"success_text": "Nearby peoples retrieved successfully."
+	}
+}
+
+```
+
+## Change Peope Nearby Location
+
+*api/people-nearby/set-profile-location*
+
+** URL Parameters **
+
+1. user_id, access_token
+2. city, country, lat, lng => All Required
+
+** Success Response **
+
+``` javascript
+
+{
+	"status": "success"
+	"success_data": {
+	"success_text": "Profile location saved successfully."
+	}
+}
+
+```
+
+** Error Response **
+
+``` javascript
+
+{
+	"status": "error"
+	"error_data": {
+	"error_text": "All fields are required."
+	}
+}
+
+```
+
+## Show Only Online Users
+
+*api/people-nearby/filter/online-status/save*
+
+** URL Parameters **
+
+1. user_id, access_token
+2. preferred_online_status => [all, online]
+
+** Success Response **
+
+``` javascript
+
+{
+	"status": "success"
+	"success_data": {
+	"success_text": "Search filter prefered online status saved successfully."
+	}
+}
+
+```
+
+** Error Response **
+
+``` javascript
+
+{
+	"status": "error"
+	"error_data": {
+	"perfered_online_status": "Must be online or all"
+	"error_text": "Validation error"
+	}
+}
+
+```
+
+## Save Filters
+
+*api/people-nearby/filter/save*
+
+** URL Parameters **
+
+*api/people-nearby/filter/save*
+
+1. user_id, access_token
+2. prefered_genders --> require (genders code with coma seperated) eg. male,female
+3. prefered_ages --> required (numeric with coma seperated) eg 18-80
+4. prefered_distance --> required (numeric)
+
+** Success Response **
+
+``` javascript
+
+{
+	"status": "success"
+	"success_data": {
+	"success_text": "Search filter saved successfully."
+	}
+}
+
+```
+
+** Error Response **
+
+``` javascript
+
+{
+	"status": "error"
+	"error_data": {
+	"perfered_genders": "Check format"
+	"error_text": "Validation error"
+	}
+}
+
+
+{
+	"status": "error"
+	"error_data": {
+	"perfered_ages": "Check format"
+	"error_text": "Validation error"
+	}
+}
+
+```
+
+
+
 
 # Encounters
 
