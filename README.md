@@ -4055,3 +4055,39 @@ The response will have *image_url* , that should be emitted in the *new_message*
 | user_blocked         | this event has to be emit when a user is blocking someone and the other user id (to_user) will receive the event message                          | Send Data: blocked_user_id Receive Data: to_user                            |
 | user_offline         | emitted from server when a user goes offline                                                                                                      | Receive Data: user_id                                                       |
 
+
+# Push Notifications
+
+## Register a Device
+
+*api/notifications/push/register-device*
+
+** URL Parameters **
+
+1. user_id, access_token
+2. device_id (optional)
+3. device_token => Required
+
+** Success Response **
+
+``` javascript
+
+{
+"status": "success"
+"success_type": "USER_DEVICE_REGISTERED"
+"success_text": "User device registered successfully."
+}
+
+```
+
+** Error Response **
+
+```
+
+{
+"status": "error"
+"error_type": "DEVICE_TOKEN_INVALID"
+"error_text": "Device token required"
+}
+
+```
