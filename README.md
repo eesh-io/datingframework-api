@@ -4042,5 +4042,16 @@ The response will have *image_url* , that should be emitted in the *new_message*
 
 ## WebSocket Events
 
-
+| connected            | This event will be fired from server when you connected to server with data                                                                       |                           Receive Data: socket_id                           |
+|----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------:|
+| user_socket_mapped   |                       After connected to socket and socket user mapped api call. This event should be emit from client side                       | No Data                                                                     |
+| user_online          | This event will come from server when a user comes online                                                                                         | Receive Data: user_id                                                       |
+| new_message          | This event should be emitted from client when sending a new message. There are two message types. 0 for normal text message. 1 for image message. | Send Data: contact_id, from_user, message_text, message_type(0,1),  to_user |
+| new_message_received | When a new message is received, this will be emitted from server                                                                                  | Receive Data: Same format as get messages API                               |
+| new_message_sent     | A confirmation from server that your message has been sent. Use it to indicate to the user that the message has been received by the other user   | Receive Data: Same as get Messages API                                      |
+| typing               | When a user is typing this message will be emitted from server. Client must also emit the same message when the user is typing                    | Receive Data: from_user, to_user Send Data: from_user, to_user              |
+| typing_stop          | When a user stops typing this will be emitted from client and server.                                                                             | Receive Data: from_user, to_userSend Data: from_user, to_user               |
+| contact_deleted      | this should be emited from client side after deleting user from chat contact and same event will be received by the to_user id                    | Send Data: to_user, contact_id Receive Data: to_user, contact_id            |
+| user_blocked         | this event has to be emit when a user is blocking someone and the other user id (to_user) will receive the event message                          | Send Data: blocked_user_id Receive Data: to_user                            |
+| user_offline         | emitted from server when a user goes offline                                                                                                      | Receive Data: user_id                                                       |
 
