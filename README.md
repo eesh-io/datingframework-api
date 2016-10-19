@@ -1564,6 +1564,341 @@ This JSON object type contains the basic details of a User.
 
 ```
 
+## View Profile By Other Users
+
+*api/profile*
+
+** URL Parameters **
+
+1. user_id, access_token
+2. view_user_id ( user_id of the profile to display )
+
+** Success Response **
+
+``` javascript
+
+{
+	"status": "success"
+	"success_data": {
+	"commom_interests": "1"
+	"photos": [2]
+	0:  {
+	"id": "8"
+	"userid": "7"
+	"source_photo_id": null
+	"photo_source": null
+	"photo_url": {
+	"thumbnail": "http://localhost/liteoxide/public/uploads/others/thumbnails7_575e8c3a045a626214259.jpg"
+	"encounter": "http://localhost/liteoxide/public/uploads/others/encounters7_575e8c3a045a626214259.jpg"
+	"other": "http://localhost/liteoxide/public/uploads/others/7_575e8c3a045a626214259.jpg"
+	"original": "http://localhost/liteoxide/public/uploads/others/original/7_575e8c3a045a626214259.jpg"
+	}-
+	"created_at": "2016-06-13 10:34:34"
+	"updated_at": "2016-06-13 10:34:34"
+	"deleted_at": null
+	"photo_name": "7_575e8c3a045a626214259.jpg"
+	}-
+	1:  {
+	"id": "9"
+	"userid": "7"
+	"source_photo_id": null
+	"photo_source": null
+	"photo_url": {
+	"thumbnail": "http://localhost/liteoxide/public/uploads/others/thumbnails7_575e8c9ab0b5967071323.jpg"
+	"encounter": "http://localhost/liteoxide/public/uploads/others/encounters7_575e8c9ab0b5967071323.jpg"
+	"other": "http://localhost/liteoxide/public/uploads/others/7_575e8c9ab0b5967071323.jpg"
+	"original": "http://localhost/liteoxide/public/uploads/others/original/7_575e8c9ab0b5967071323.jpg"
+	}-
+	"created_at": "2016-06-13 10:36:10"
+	"updated_at": "2016-06-13 10:36:10"
+	"deleted_at": null
+	"photo_name": "7_575e8c9ab0b5967071323.jpg"
+	}-
+	-
+	"field_sections": [1]
+	0:  {
+	"section_id": "1"
+	"text": "custom_profile.personalinformation"
+	"fields": [6]
+	0:  {
+	"field_id": "2"
+	"field_type": "dropdown"
+	"text": "custom_profile.height"
+	"options": [7]
+	0:  {
+	"option_id": "3"
+	"text": "custom_profile.5ft"
+	"is_selected": "true"
+	}-
+	1:  {
+	"option_id": "4"
+	"text": "custom_profile.55ft"
+	"is_selected": "false"
+	}-
+	2:  {
+	"option_id": "5"
+	"text": "custom_profile.57ft"
+	"is_selected": "false"
+	}-
+	3:  {
+	"option_id": "6"
+	"text": "custom_profile.58ft"
+	"is_selected": "false"
+	}-
+	4:  {
+	"option_id": "7"
+	"text": "custom_profile.6ft"
+	"is_selected": "false"
+	}-
+	5:  {
+	"option_id": "8"
+	"text": "custom_profile.62ft"
+	"is_selected": "false"
+	}-
+	6:  {
+	"option_id": "9"
+	"text": "custom_profile.63ft"
+	"is_selected": "false"
+	}-
+	-
+	}-
+	1:  {
+	"field_id": "3"
+	"field_type": "dropdown"
+	"text": "custom_profile.weight"
+	"options": [13]
+	0:  {
+	"option_id": "10"
+	"text": "custom_profile.50kg"
+	"is_selected": "true"
+	}-
+	1:  {
+	"option_id": "11"
+	"text": "custom_profile.52kg"
+	"is_selected": "false"
+	}-
+	2:  {
+	"option_id": "12"
+	"text": "custom_profile.53kg"
+	"is_selected": "false"
+	}-
+	3:  {
+	"option_id": "13"
+	"text": "custom_profile.58kg"
+	"is_selected": "false"
+	}-
+	4:  {
+	"option_id": "14"
+	"text": "custom_profile.60kg"
+	"is_selected": "false"
+	}-
+	5:  {
+	"option_id": "15"
+	"text": "custom_profile.62kg"
+	"is_selected": "false"
+	}-
+	6:  {
+	"option_id": "16"
+	"text": "custom_profile.64kg"
+	"is_selected": "false"
+	}-
+	7:  {
+	"option_id": "17"
+	"text": "custom_profile.68kg"
+	"is_selected": "false"
+	}-
+	8:  {
+	"option_id": "18"
+	"text": "custom_profile.70kg"
+	"is_selected": "false"
+	}-
+	9:  {
+	"option_id": "19"
+	"text": "custom_profile.72kg"
+	"is_selected": "false"
+	}-
+	10:  {
+	"option_id": "20"
+	"text": "custom_profile.74kg"
+	"is_selected": "false"
+	}-
+	11:  {
+	"option_id": "21"
+	"text": "custom_profile.78kg"
+	"is_selected": "false"
+	}-
+	12:  {
+	"option_id": "22"
+	"text": "custom_profile.80kg"
+	"is_selected": "false"
+	}-
+	-
+	}-
+	2:  {
+	"field_id": "4"
+	"field_type": "dropdown"
+	"text": "custom_profile.eyecolor"
+	"options": [3]
+	0:  {
+	"option_id": "23"
+	"text": "custom_profile.black"
+	"is_selected": "true"
+	}-
+	1:  {
+	"option_id": "24"
+	"text": "custom_profile.brown"
+	"is_selected": "false"
+	}-
+	2:  {
+	"option_id": "25"
+	"text": "custom_profile.blue"
+	"is_selected": "false"
+	}-
+	-
+	}-
+	3:  {
+	"field_id": "5"
+	"field_type": "dropdown"
+	"text": "custom_profile.hereto"
+	"options": [3]
+	0:  {
+	"option_id": "26"
+	"text": "custom_profile.dating"
+	"is_selected": "true"
+	}-
+	1:  {
+	"option_id": "27"
+	"text": "custom_profile.chatting"
+	"is_selected": "false"
+	}-
+	2:  {
+	"option_id": "28"
+	"text": "custom_profile.makenewfriends"
+	"is_selected": "false"
+	}-
+	}
+	4:  {
+	"field_id": "6"
+	"field_type": "text"
+	"text": "Text"
+	"value": "sadf"
+	}-
+	5:  {
+	"field_id": "7"
+	"field_type": "textarea"
+	"text": "textarea"
+	"value": " asfd"
+	}-
+	-
+	}-
+	-
+	"user_popularity": {
+	"popularity": 0
+	"popularity_type": "very_very_low"
+	}-
+	"liked_me": -1
+	"i_liked": -1
+	"profile_complete_percentage": 100
+	"user_score": {
+	"score": 0
+	"likes": 0
+	"dislikes": 0
+	}-
+	"user": {
+	"id": "7"
+	"username": "saikat@gmail.com"
+	"gender": "female"
+	"name": "Saikat Dutta"
+	"dob": "1991-02-01"
+	"city": "Southegowdanahalli"
+	"country": "India"
+	"hereto": ""
+	"profile_pic_url": {
+	"thumbnail": "http://localhost/liteoxide/public/uploads/others/thumbnails/7_575e8c3a045a626214259.jpg"
+	"encounter": "http://localhost/liteoxide/public/uploads/others/encounters/7_575e8c3a045a626214259.jpg"
+	"other": "http://localhost/liteoxide/public/uploads/others/7_575e8c3a045a626214259.jpg"
+	"original": "http://localhost/liteoxide/public/uploads/others/original/7_575e8c3a045a626214259.jpg"
+	}-
+	"status": ""
+	"package_name": null
+	"expired_at": null
+	"activate_token": "223427215"
+	"password_token": ""
+	"activate_user": "activated"
+	"register_from": "LiteOxide"
+	"verified": "unverified"
+	"latitude": "13.24"
+	"longitude": "77.71"
+	"language": "en"
+	"last_request": "2016-06-20 14:57:45"
+	"access_token": null
+	"created_at": "2016-06-13 10:33:36"
+	"updated_at": "2016-06-20 14:57:45"
+	"deleted_at": null
+	"gender_text": "Female"
+	"age": 25
+	"superpower_activated": "false"
+	"superpower_days_left": "-9999"
+	"invisible": "false"
+	"online_status": "true"
+	"social_links": [0]
+	"social_verified": "false"
+	"profile_picture": "7_575e8c3a045a626214259.jpg"
+	}-
+	"blocked": "false"
+	"blocked_me": "true"
+	"about_me": ""
+	"distance": {
+	"value": 3.3680194444774
+	"unit": "Km"
+	}-
+	"user_interests": [2]
+	0:  {
+	"id": "2"
+	"interest_id": "3"
+	"interest_text": "adsdf"
+	}-
+	1:  {
+	"id": "5"
+	"interest_id": "1"
+	"interest_text": "Movies"
+	}-
+	-
+	"profile_visitor_count": {
+	"today": 7
+	"this_week": 7
+	"this_month": 7
+	}-
+	"profile_visitor_difference": {
+	"today_increased": "true"
+	"this_week_increased": "true"
+	"this_month_increased": "true"
+	}-
+	"max_file_upload_size": {
+	"value": "10"
+	"unit": "MB"
+	}-
+	"minimum_photos_required": 0
+	"user_can_see_all_photos": true
+	"success_text": "Profile Data retrived successfully."
+	}-
+	}
+
+```
+
+** Error Response **
+
+``` javascript
+
+{
+	"status": "error"
+	"error_data": {
+	"error_text": "User not found."
+	}
+}
+
+```
+
 # User Account
 
 ## Change Email
@@ -2194,6 +2529,526 @@ This JSON object type contains the basic details of a User.
 
 
 # Encounters
+
+## Get Encounters
+
+*api/encounters*
+
+** URL Parameters **
+
+1. user_id, access_token
+
+** Success Response **
+
+``` javascript
+
+{
+	"status": "success"
+	"success_data": {
+	"encounters_left": 9999
+	"encouters": [1]
+	0:  {
+	"id": "30"
+	"username": "saikatdutta1991@gmail.commm"
+	"gender": "male"
+	"name": "ʇɐʞıɐs ɐʇʇnp"
+	"dob": "1991-12-05"
+	"city": "Bangalore"
+	"country": "India"
+	"hereto": ""
+	"status": ""
+	"package_name": null
+	"expired_at": null
+	"activate_user": "activated"
+	"register_from": "facebook"
+	"verified": "verified"
+	"latitude": "12.98"
+	"longitude": "77.58"
+	"language": ""
+	"last_request": "2016-06-22 14:45:41"
+	"created_at": "2016-06-22 14:39:00"
+	"updated_at": "2016-06-22 14:45:41"
+	"deleted_at": null
+	"common_interest_count": "0"
+	"profile_picture_url": {
+	"thumbnail": "http://localhost/liteoxide/public/uploads/others/thumbnails/30_576aa304723c6_42836200.jpg"
+	"encounter": "http://localhost/liteoxide/public/uploads/others/encounters/30_576aa304723c6_42836200.jpg"
+	"other": "http://localhost/liteoxide/public/uploads/others/30_576aa304723c6_42836200.jpg"
+	"original": "http://localhost/liteoxide/public/uploads/others/original/30_576aa304723c6_42836200.jpg"
+	}-
+	"profile_picture_name": "30_576aa304723c6_42836200.jpg"
+	"superpower_activated": "false"
+	"online_status": "false"
+	"age": 24
+	"social_links": [1]{ 
+		0:  "facebook"
+		}
+	"social_verified": "true"
+	"photos": {
+	"count": 1
+	"items": [1]
+	0:  {
+	"id": "49"
+	"photo_name": "30_576aa304723c6_42836200.jpg"
+	"encoutner_photo_url": "http://localhost/liteoxide/public/uploads/others/encounters/30_576aa304723c6_42836200.jpg"
+	"thumbnail_photo_url": "http://localhost/liteoxide/public/uploads/others/thumbnails/30_576aa304723c6_42836200.jpg"
+	"original_photo_url": "http://localhost/liteoxide/public/uploads/others/original/30_576aa304723c6_42836200.jpg"
+	"other_photo_url": "http://localhost/liteoxide/public/uploads/others/30_576aa304723c6_42836200.jpg"
+	}
+	
+	}
+	"liked_me": "0"
+	}
+
+	"success_text": "Encounters retrived successfully."
+	}
+
+}
+
+```
+
+** Error Response **
+
+``` javascript
+
+{
+	"status": "error"
+	"error_data": {
+	"encounters_left": "0"
+	"error_text": "No encouters"
+	}
+}
+
+```
+
+## Like/Dislike a User
+
+*api/encounter/user/like*
+
+** URL Parameters **
+
+1. user_id, access_token
+2. encounter_id -> required
+3. like --> required value are _like or _dislike
+
+** Success Response **
+
+``` javascript
+
+{
+	"status": "success"
+	"success_data": {
+	"match_found": "false"
+	"success_text": "User encountered successfully."
+	}
+}
+
+{
+"status": "success"
+	"success_data": {
+	"match_found": "true"
+	"success_text": "User encountered successfully."
+	}
+}
+
+
+```
+
+** Error Response **
+
+``` javascript
+
+{
+"status": "error"
+	"error_data": {
+	"encounter_id": "User to be liked is not valid."
+	"error_text": "Validation error."
+	}
+}
+
+
+
+
+{
+"status": "error"
+	"error_data": {
+	"like": "Like or dislike is required or format error"
+	"error_text": "Validation error."
+	}
+}
+
+
+{
+"status": "error"
+	"error_data": {
+	"error_text": "Some error occured or may be already encountered."
+	}
+}
+
+
+```
+
+## Get Matched Users
+
+*api/matches*
+
+** URL Parameters **
+
+1. user_id, access_token
+
+** Success Response for Superpower Users **
+
+``` javascript
+
+{
+	"status": "success"
+	"success_data": {
+	"superpower_activated": "false"
+	"matched_users": [2]
+	0:  {
+	"id": "33"
+	"username": "ritu29jun@gmail.com"
+	"gender": "female"
+	"name": "RiSita Ritu Hazra"
+	"dob": "1971-01-19"
+	"city": "Hyderabad"
+	"country": "India"
+	"hereto": ""
+	"status": ""
+	"package_name": null
+	"expired_at": null
+	"activate_user": "activated"
+	"register_from": "facebook"
+	"verified": "verified"
+	"latitude": "17.39"
+	"longitude": "78.49"
+	"language": "es"
+	"last_request": "2016-06-27 13:27:20"
+	"created_at": "2016-06-25 18:08:53"
+	"updated_at": "2016-06-27 13:27:20"
+	"deleted_at": null
+	"profile_picture_url": {
+	"thumbnail": "http://localhost/liteoxide/public/uploads/others/thumbnails/33_576ec8b56407e_11313141.jpg"
+	"encounter": "http://localhost/liteoxide/public/uploads/others/encounters/33_576ec8b56407e_11313141.jpg"
+	"other": "http://localhost/liteoxide/public/uploads/others/33_576ec8b56407e_11313141.jpg"
+	"original": "http://localhost/liteoxide/public/uploads/others/original/33_576ec8b56407e_11313141.jpg"
+	}-
+	"profile_picture_name": "33_576ec8b56407e_11313141.jpg"
+	"superpower_activated": "false"
+	"online_status": "false"
+	"age": 45
+	"populatiry": {
+	"value": "0"
+	"type": "very_very_low"
+	}-
+	"credit_balance": "990"
+	}-
+	1:  {
+	"id": "7"
+	"username": "saikat@gmail.com"
+	"gender": "female"
+	"name": "Saikat Dutta"
+	"dob": "1991-02-01"
+	"city": "Southegowdanahalli"
+	"country": "India"
+	"hereto": ""
+	"status": ""
+	"package_name": null
+	"expired_at": null
+	"activate_user": "activated"
+	"register_from": "LiteOxide"
+	"verified": "unverified"
+	"latitude": "13.24"
+	"longitude": "77.71"
+	"language": "en"
+	"last_request": "2016-06-27 09:07:14"
+	"created_at": "2016-06-13 10:33:36"
+	"updated_at": "2016-06-27 09:07:14"
+	"deleted_at": null
+	"profile_picture_url": {
+	"thumbnail": "http://localhost/liteoxide/public/uploads/others/thumbnails/7_576ced051cfa926071522.jpg"
+	"encounter": "http://localhost/liteoxide/public/uploads/others/encounters/7_576ced051cfa926071522.jpg"
+	"other": "http://localhost/liteoxide/public/uploads/others/7_576ced051cfa926071522.jpg"
+	"original": "http://localhost/liteoxide/public/uploads/others/original/7_576ced051cfa926071522.jpg"
+	}
+	"profile_picture_name": "7_576ced051cfa926071522.jpg"
+	"superpower_activated": "false"
+	"online_status": "false"
+	"age": 25
+	"populatiry": {
+	"value": "0"
+	"type": "very_very_low"
+	}-
+	"credit_balance": "960"
+	}-
+	"paging": {
+	"total": 2
+	"current_page_url": "http://localhost/liteoxide/public/api/matches?page=1"
+	"more_pages": "false"
+	"prevous_page_url": ""
+	"next_page_url": ""
+	"last_page_url": "http://localhost/liteoxide/public/api/matches?page=1"
+	}-
+	"success_text": "Matched users retrived successfully."
+	}
+}
+
+
+```
+
+** Success Response for Non-Superpower Users **
+
+``` javascript
+
+{
+	"status": "success"
+	"success_data": {
+	"superpower_activated": "false"
+	"matched_users": [0]
+	"paging": {
+	"total": 2
+	"current_page_url": "http://localhost/liteoxide/public/api/matches?page=1"
+	"more_pages": "false"
+	"prevous_page_url": ""
+	"next_page_url": ""
+	"last_page_url": "http://localhost/liteoxide/public/api/matches?page=1"
+	}
+	"success_text": "Matched users retrived successfully."
+	}
+}
+
+
+```
+
+
+## My Likes
+
+*api/mylikes*
+
+** URL Parameters **
+
+1. user_id, access_token
+
+** Success Response for Superpower Users **
+
+``` javascript
+
+{
+	"status": "success"
+	"success_data": {
+	"superpower_activated": "false"
+	"my_liked_users": [0]
+	"paging": {
+	"total": 2
+	"current_page_url": "http://localhost/liteoxide/public/api/mylikes?page=1"
+	"more_pages": "false"
+	"prevous_page_url": ""
+	"next_page_url": ""
+	"last_page_url": "http://localhost/liteoxide/public/api/mylikes?page=1"
+	}
+	"success_text": "My liked users retrived successfully."
+	}
+}
+
+```
+
+** Success Response for Non-Superpower Users **
+
+``` javascript
+
+	{
+	"status": "success"
+	"success_data": {
+	"superpower_activated": "false"
+	"my_liked_users": [2]
+	0:  {
+	"id": "33"
+	"username": "ritu29jun@gmail.com"
+	"gender": "female"
+	"name": "RiSita Ritu Hazra"
+	"dob": "1971-01-19"
+	"city": "Hyderabad"
+	"country": "India"
+	"hereto": ""
+	"status": ""
+	"package_name": null
+	"expired_at": null
+	"activate_user": "activated"
+	"register_from": "facebook"
+	"verified": "verified"
+	"latitude": "17.39"
+	"longitude": "78.49"
+	"language": "es"
+	"last_request": "2016-06-27 13:27:20"
+	"created_at": "2016-06-25 18:08:53"
+	"updated_at": "2016-06-27 13:27:20"
+	"deleted_at": null
+	"profile_picture_url": {
+	"thumbnail": "http://localhost/liteoxide/public/uploads/others/thumbnails/33_576ec8b56407e_11313141.jpg"
+	"encounter": "http://localhost/liteoxide/public/uploads/others/encounters/33_576ec8b56407e_11313141.jpg"
+	"other": "http://localhost/liteoxide/public/uploads/others/33_576ec8b56407e_11313141.jpg"
+	"original": "http://localhost/liteoxide/public/uploads/others/original/33_576ec8b56407e_11313141.jpg"
+	}-
+	"profile_picture_name": "33_576ec8b56407e_11313141.jpg"
+	"superpower_activated": "false"
+	"online_status": "false"
+	"age": 45
+	"populatiry": {
+	"value": "0"
+	"type": "very_very_low"
+	}-
+	"credit_balance": "990"
+	}-
+	1:  {
+	"id": "7"
+	"username": "saikat@gmail.com"
+	"gender": "female"
+	"name": "Saikat Dutta"
+	"dob": "1991-02-01"
+	"city": "Southegowdanahalli"
+	"country": "India"
+	"hereto": ""
+	"status": ""
+	"package_name": null
+	"expired_at": null
+	"activate_user": "activated"
+	"register_from": "LiteOxide"
+	"verified": "unverified"
+	"latitude": "13.24"
+	"longitude": "77.71"
+	"language": "en"
+	"last_request": "2016-06-27 09:07:14"
+	"created_at": "2016-06-13 10:33:36"
+	"updated_at": "2016-06-27 09:07:14"
+	"deleted_at": null
+	"profile_picture_url": {
+	"thumbnail": "http://localhost/liteoxide/public/uploads/others/thumbnails/7_576ced051cfa926071522.jpg"
+	"encounter": "http://localhost/liteoxide/public/uploads/others/encounters/7_576ced051cfa926071522.jpg"
+	"other": "http://localhost/liteoxide/public/uploads/others/7_576ced051cfa926071522.jpg"
+	"original": "http://localhost/liteoxide/public/uploads/others/original/7_576ced051cfa926071522.jpg"
+	}-
+	"profile_picture_name": "7_576ced051cfa926071522.jpg"
+	"superpower_activated": "false"
+	"online_status": "false"
+	"age": 25
+	"populatiry": {
+	"value": "0"
+	"type": "very_very_low"
+	}-
+	"credit_balance": "960"
+	}-
+	"paging": {
+	"total": 2
+	"current_page_url": "http://localhost/liteoxide/public/api/mylikes?page=1"
+	"more_pages": "false"
+	"prevous_page_url": ""
+	"next_page_url": ""
+	"last_page_url": "http://localhost/liteoxide/public/api/mylikes?page=1"
+	}
+	"success_text": "My liked users retrived successfully."
+	}
+}
+
+
+```
+
+## Who Liked Me
+
+*api/likes*
+
+** URL Parameters **
+
+1. user_id, access_token
+
+** Success Response for Superpower Users ** 
+
+``` javascript
+
+{
+	"status": "success"
+	"success_data": {
+	"superpower_activated": "false"
+	"users_liked_me": [1]
+	0:  {
+	"id": "33"
+	"username": "ritu29jun@gmail.com"
+	"gender": "female"
+	"name": "RiSita Ritu Hazra"
+	"dob": "1971-01-19"
+	"city": "Hyderabad"
+	"country": "India"
+	"hereto": ""
+	"status": ""
+	"package_name": null
+	"expired_at": null
+	"activate_user": "activated"
+	"register_from": "facebook"
+	"verified": "verified"
+	"latitude": "17.39"
+	"longitude": "78.49"
+	"language": "es"
+	"last_request": "2016-06-27 13:27:20"
+	"created_at": "2016-06-25 18:08:53"
+	"updated_at": "2016-06-27 13:27:20"
+	"deleted_at": null
+	"profile_picture_url": {
+	"thumbnail": "http://localhost/liteoxide/public/uploads/others/thumbnails/33_576ec8b56407e_11313141.jpg"
+	"encounter": "http://localhost/liteoxide/public/uploads/others/encounters/33_576ec8b56407e_11313141.jpg"
+	"other": "http://localhost/liteoxide/public/uploads/others/33_576ec8b56407e_11313141.jpg"
+	"original": "http://localhost/liteoxide/public/uploads/others/original/33_576ec8b56407e_11313141.jpg"
+	}-
+	"profile_picture_name": "33_576ec8b56407e_11313141.jpg"
+	"superpower_activated": "false"
+	"online_status": "false"
+	"age": 45
+	"populatiry": {
+	"value": "0"
+	"type": "very_very_low"
+	}-
+	"credit_balance": "990"
+	}-
+	-
+	"paging": {
+	"total": 2
+	"current_page_url": "http://localhost/liteoxide/public/api/likes?page=1"
+	"more_pages": "true"
+	"prevous_page_url": ""
+	"next_page_url": "http://localhost/liteoxide/public/api/likes?page=2"
+	"last_page_url": "http://localhost/liteoxide/public/api/likes?page=2"
+	}-
+	"success_text": "Users liked me retrived successfully."
+	}
+}
+
+
+```
+
+
+** Success Response for Non-Superpower User **
+
+``` javascript
+
+{
+	"status": "success"
+	"success_data": {
+	"superpower_activated": "false"
+	"users_liked_me": [0]
+	"paging": {
+	"total": 2
+	"current_page_url": "http://localhost/liteoxide/public/api/likes?page=1"
+	"more_pages": "false"
+	"prevous_page_url": ""
+	"next_page_url": ""
+	"last_page_url": "http://localhost/liteoxide/public/api/likes?page=1"
+	}-
+	"success_text": "Users liked me retrived successfully."
+	}
+}
+
+
+```
+
+
 
 
 # Social Logins
