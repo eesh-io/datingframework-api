@@ -3173,5 +3173,196 @@ SUPERPOWER_NOT_ACTIVATED => you can not see visitors because you have not superp
 
 # Social Logins
 
+## Google
 
+### Get Google App ID
+
+*api/google/get-app-id*
+
+** URL Parameters **
+
+No Parameters
+
+** Success Response **
+
+``` javascript
+
+{
+	"status": "success"
+	"success_data": {
+	"facebook_app_id": "29058361293-qbkner1sb2ivp2itcsm1ertmtgjmutkt.apps.googleusercontent.com"
+	"success_text": "Google Api Key retrived successfully."
+	}
+}
+
+```
+ 
+
+
+### Google Sign In
+
+You need to use the Google SDK to sign in the user and get the user details, and then post those details to this API
+
+*api/google*
+
+** URL Parameters **
+
+1. google_id:required
+2. email:required
+3. country:optional
+4. city:optional
+5. latitude:optional
+6. longitude:optional
+7. avatar_url:required
+8. gender:optional
+9. name: optional
+10. birthday: optional
+11. is_default_picture : required
+
+
+** Success Response **
+
+``` javascript
+
+{
+	"status": "success"
+	"success_data": {
+	"user_id": 29
+	"name": ""
+	"username": "saikatdutta1991@gmail.com"
+	"access_token": "$2y$10$7Rhuta4b47.l9wyULeU8HOg8IK7Q37j36otY.xfQGGY/Ln6qYJ5TO"
+	"last_request_timestamp": null
+	"data_incomplete": "true"
+	"success_text": "User registered successfully."
+	}
+}
+
+
+
+{
+	"status": "success"
+	"success_data": {
+	"user_id": "29"
+	"name": ""
+	"username": "saikatdutta1991@gmail.com"
+	"access_token": "$2y$10$FXqq9/AX.6D.7WqC6Ebpm.BUrZT304Sfvy.NdZwzSOU6OwrkGT3bi"
+	"last_request_timestamp": null
+	"data_incomplete": "true"
+	"success_text": "User logged in successfully."
+	}
+}
+
+```
+
+** Error Response **
+
+``` javascript
+
+{
+"status": "error"
+	"error_data": {
+	"google_id": "The google_id field is required."
+	"avatar_url": "The avatar_url field is required."
+	"email": "The email field is required."
+	"is_default_picture": "The is_default_picture field is required."
+	}
+}
+
+
+```
+
+
+## Facebook
+
+### Get Facebook ID
+
+*api/facebook/get-app-id*
+
+** URL Parameters **
+
+No Parameters
+
+** Success Response **
+
+``` javascript
+
+{
+	"status": "success"
+	"success_data": {
+	"facebook_app_id": "902618216496515"
+	"success_text": "Facebook Api Key retrived successfully."
+	}
+}
+
+```
+
+### Sign in With Facebook
+
+Sign in using the Facebook SDK and pass the returned values to this API:
+
+*api/facebook*
+
+** URL Parameters **
+
+1. facebook_id: required
+2. email: optional
+3. country; optional
+4. city: optional
+5. latitude: optional
+6. longitude: optional
+7. avatar_url: required
+8. gender: optional
+9. name: required
+10. birthday: optional
+11. is_default_picture: required
+
+
+** Success Response **
+
+``` javascript
+
+{
+	"status": "success"
+	"success_data": {
+	"user_id": 23
+	"name": "saikat"
+	"username": "saikatdutta1991@gmail.com"
+	"access_token": "$2y$10$efyYAQgaWZakYGP1U8V8Ee9/FuXv9r4Njq9QuKO9ulwAQjyMeThHO"
+	"last_request_timestamp": null
+	"data_incomplete": "true"
+	"success_text": "User registered successfully."
+	}
+}
+
+
+
+{
+	"status": "success"
+	"success_data": {
+	"user_id": "23"
+	"name": "saikat"
+	"username": "saikatdutta1991@gmail.com"
+	"access_token": "$2y$10$ax6FzenL9NWqY7mS7tEKd.GCR0zBtOMWIPBYPAEsaa7zTPPE.FXEq"
+	"last_request_timestamp": "2016-06-20 12:35:37"
+	"data_incomplete": "true"
+	"success_text": "User logged in successfully."
+	}
+}
+
+```
+
+** Error Response **
+
+``` javascript
+
+{
+	"status": "error"
+	"error_data": {
+	"facebook_id": "The facebook_id field is required."
+	"avatar_url": "The avatar_url field is required."
+	}
+}
+
+
+```
 
