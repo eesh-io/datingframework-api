@@ -2018,6 +2018,235 @@ SUPERPOWER_NOT_ACTIVATED => you can not see visitors because you have not superp
 
 ```
 
+# Abuse Report & Block
+
+## Report User
+
+*api/report/user*
+
+** URL Parameters **
+
+1. user_id, access_token,
+2. reported_user_id => required
+3. reason => required
+
+** Success Response **
+
+``` javascript
+
+{
+	"status": "success"
+	"success_data": {
+	"success_text": "Report against user done successfully."
+	}
+}
+
+```
+
+** Error Response **
+
+``` javascript
+
+{
+	"status": "error"
+	"error_data": {
+	"error_text": "Reported user's id is required"
+	}
+}
+
+{
+	"status": "error"
+	"error_data": {
+	"error_text": "Reason is required"
+	}
+}
+
+```
+
+## Report Photo
+
+*api/report/photo*
+
+** URL Parameters **
+
+1. user_id, access_token
+2. photo_name => required
+3. reason => required
+
+
+** Success Response **
+
+``` javascript
+
+{
+	"status": "success"
+	"success_data": {
+	"success_text": "Report against photo done successfully."
+	}
+}
+
+```
+
+** Error Response **
+
+``` javascript
+
+{
+	"status": "error"
+	"error_data": {
+	"error_text": "Photo name is required"
+	}
+}
+
+{
+	"status": "error"
+	"error_data": {
+	"error_text": "Reason is required"
+	}
+}
+
+```
+
+## Block an User
+
+*api/user/block*
+
+** URL Parameters **
+
+1. user_id, access_token,
+2. block_user_id --> required
+
+** Success Response **
+
+``` javascript
+{
+	"status": "success"
+	"success_data": {
+	"success_text": "User blocked successfully."
+	}
+}
+
+
+```
+
+** Error Response **
+
+``` javascript
+
+{
+	"status": "error"
+	"error_data": {
+	"error_text": "User block_user_id is required."
+	}
+}
+
+
+
+{
+	"status": "error"
+	"error_data": {
+	"error_text": "You cant block yourself."
+	}
+}
+
+```
+
+## Unblock User
+
+*api/user/unblock*
+
+** URL Parameters **
+
+1. user_id, access_token,
+2. blocked_user_id --> required
+
+** Success Response **
+
+``` javascript
+
+
+{
+	"status": "success"
+	"success_data": {
+	"success_text": "User unblocked successfully."
+	}
+}
+
+```
+
+** Error Response **
+
+``` javascript
+
+{
+	"status": "error"
+	"error_data": {
+	"error_text": "User blocked_user_id is required."
+	}
+}
+
+
+{
+	"status": "error"
+	"error_data": {
+	"error_text": "You cant unblock yourself."
+	}
+}
+
+
+```
+
+## Get Blocked Users List
+
+*api/user/blocks*
+
+** URL Parameters **
+
+1. user_id, access_token
+
+** Success Response **
+
+``` javascript
+
+{
+	"status": "success"
+	"success_data": {
+	"block_users_count": 1
+	"block_users": [1]
+	0:  {
+	"id": "5"
+	"username": "saikatdutta@gmail.com"
+	"gender": "female"
+	"name": "ʇɐʞıɐs ɐʇʇnp"
+	"dob": "1991-12-05"
+	"city": "Bangalore"
+	"country": "India"
+	"hereto": ""
+	"profile_pic_url": "5_575c1e785d7a2_52889064.jpg"
+	"status": ""
+	"package_name": null
+	"expired_at": null
+	"activate_token": ""
+	"password_token": ""
+	"register_from": "vk"
+	"verified": "verified"
+	"latitude": "12.97"
+	"longitude": "77.59"
+	"language": ""
+	"last_request": "2016-06-11 15:03:15"
+	"access_token": null
+	"created_at": "2016-06-11 14:21:44"
+	"updated_at": "2016-06-11 15:03:15"
+	"deleted_at": null
+	"activated": "activated"
+	"age": 24
+	}
+	"success_text": "Blocked users list retrived successfully."
+	}
+}
+
+```
+
 
 # User Account
 
