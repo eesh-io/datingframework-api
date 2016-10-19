@@ -1396,6 +1396,53 @@ This JSON object type contains the basic details of a User.
 
 ```
 
+### Set Photo as Profile Picture
+
+*api/profile/me/change-photo*
+
+** URL Parameters **
+
+1. user_id, access_token
+2. photo_name (eg: 610_57f4d4c174f0273330056.jpg)
+
+** Success Response **
+
+``` javascript
+
+{
+"status": "success"
+"success_data": {
+"success_text": "Profile picture changed successfully."
+}
+}
+
+```
+
+** Error Response **
+
+``` javascript
+
+{
+	"status": "error"
+	"error_type": "PHOTO_NOT_FOUND"
+	"error_data": {
+	"error_text": "Not photo found with this photo."
+	}
+}
+
+
+{
+	"status": "error"
+	"error_type": "PHOTO_ALREADY_PROFILE_PICTURE_SET"
+	"error_data": {
+	"error_text": "Photo already set as profie picture."
+	}
+}
+
+
+```
+
+
 ### Delete Photo
 
 *api/profile/me/delete-photo*
@@ -1898,6 +1945,79 @@ This JSON object type contains the basic details of a User.
 }
 
 ```
+
+## Profile Visitor List
+
+*api/visitors*
+
+** URL Parameters **
+
+1. user_id, access_token
+
+** Success Response **
+
+Values for "no_visitor_reason":
+CAN_SEE_VISITORS => means visitors are there.
+NORMAL_NO_VISITORS => you can see visitors but nobody has visited you yet
+SUPERPOWER_NOT_ACTIVATED => you can not see visitors because you have not superpower activated
+
+``` javascript
+{
+	"status": "success"
+	"success_data": {
+	"superpower_activated": "true"
+	"visitors": [1]
+	0:  {
+	"id": 366
+	"username": "saikat.amca.12@acharya.ac.in"
+	"gender": "male"
+	"dob": "1992-02-19"
+	"city": "Bengaluru"
+	"country": "India"
+	"hereto": ""
+	"status": ""
+	"activate_user": "activated"
+	"register_from": "google"
+	"verified": "verified"
+	"latitude": 12.9716
+	"longitude": 77.5946
+	"created_at": "2016-08-05 08:55:33"
+	"updated_at": "2016-08-30 13:00:29"
+	"deleted_at": null
+	"name": "acharya saikat"
+	"language": "en"
+	"last_request": "2016-08-30 13:00:28"
+	"profile_picture_url": {
+	"thumbnail": "http://df-dev.socialoxide.club/uploads/others/thumbnails/366_57a5cfd0b456e54762716.jpg"
+	"encounter": "http://df-dev.socialoxide.club/uploads/others/encounters/366_57a5cfd0b456e54762716.jpg"
+	"other": "http://df-dev.socialoxide.club/uploads/others/366_57a5cfd0b456e54762716.jpg"
+	"original": "http://df-dev.socialoxide.club/uploads/others/original/366_57a5cfd0b456e54762716.jpg"
+	}-
+	"profile_picture_name": "366_57a5cfd0b456e54762716.jpg"
+	"superpower_activated": "true"
+	"online_status": "true"
+	"age": 24
+	"populatiry": {
+	"value": "0"
+	"type": "very_very_low"
+	}-
+	}-
+	-
+	"no_visitor_reason": "CAN_SEE_VISITORS"  *notes
+	"paging": {
+	"total": 1
+	"current_page_url": "http://df-dev.socialoxide.club/api/visitors?page=1"
+	"more_pages": "false"
+	"prevous_page_url": ""
+	"next_page_url": ""
+	"last_page_url": "http://df-dev.socialoxide.club/api/visitors?page=1"
+	}
+	"success_text": "Visitors retrived successfully."
+	}
+}
+
+```
+
 
 # User Account
 
